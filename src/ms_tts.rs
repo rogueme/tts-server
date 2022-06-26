@@ -628,6 +628,7 @@ pub(crate) async fn get_ms_online_config() -> Result<String, Box<dyn Error>> {
     let token_str = match token {
         Some(t) => {
             let df = t.get(1).unwrap().as_str();
+            info!("token {:?}",df);
             trace!("token获取成功：{}", df);
             Some(df.to_owned())
         }
